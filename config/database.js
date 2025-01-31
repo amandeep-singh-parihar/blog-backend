@@ -1,7 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"); // import the mongoose as the function is going to connect out application with the db
 
-require("dotenv").config();
+require("dotenv").config(); // this will load all the config into the process object
 
+// this is the function which connect the application with the database
 const dbConnect = () => {
     mongoose
         .connect(process.env.DATABASE_URL, {
@@ -18,4 +19,5 @@ const dbConnect = () => {
         });
 };
 
+// exports the function
 module.exports = dbConnect;

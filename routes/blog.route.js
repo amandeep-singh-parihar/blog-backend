@@ -1,5 +1,5 @@
-const express = require("express");
-const router = express.Router();
+const express = require("express"); // import the express
+const router = express.Router();    // import the express Router
 
 //import controller
 const { createCommentController } = require("../controllers/createCommentController");
