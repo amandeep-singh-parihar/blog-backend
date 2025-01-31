@@ -1,16 +1,14 @@
 const Post = require("../models/post.model");
 
-exports.getPostController = async (req, res) => {
+exports.createPostController = async (req, res) => {
     try {
-        const posts = await Post.find()
-            .populate("likes")
-            .populate("comments")
-            .exec();
+        const { title, body, likes, comments } = req.body;
+        const response = await Post.create({ title, body, likes, comments });
 
         res.status(200).json({
             success: true,
-            data: posts,
-            message: "Entire posts Data is fetched",
+            data: response,
+            message: "entry create successfully",
         });
     } catch (error) {
         console.error(error);

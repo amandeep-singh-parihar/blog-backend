@@ -12,15 +12,15 @@ const blogRoute = require("./routes/blog.route");
 //mount
 app.use("/api/v1", blogRoute);
 
-const dbConnect = require("./config/database")
+const dbConnect = require("./config/database");
 dbConnect();
 
 //server started
-app.listen(PORT,()=>{
-    console.log("App start at the PORT : "+PORT);
-})
+app.listen(PORT, () => {
+    console.log("App start at the PORT : " + PORT);
+});
 
 //default route
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.send(`<h1>ok home page 7439280437394820487</h1>`);
 });
