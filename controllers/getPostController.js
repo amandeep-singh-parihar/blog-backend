@@ -1,6 +1,6 @@
 const Post = require("../models/post.model"); // importing the model which we want to use
 
-// Business logic - it contain what operation will happen if any one hit the route it is mapped with
+// Business logic - it contain what operation will happen if any one hit the route, it is mapped with
 exports.getPostController = async (req, res) => {
     try {
         const posts = await Post.find()

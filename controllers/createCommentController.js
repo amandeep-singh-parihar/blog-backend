@@ -13,7 +13,7 @@ exports.createCommentController = async (req, res) => {
         //         .json({ error: "Post ID, user ID, and body are required" });
         // }
 
-        // create a comment object which contain the data which i fetched from the body in line 8
+        // create a comment object which contain the data which I fetched from the body in line 8
         const comment = new Comment({
             post,
             user,

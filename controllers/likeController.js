@@ -39,7 +39,7 @@ exports.unlikePost = async (req, res) => {
             Like.findOneAndDelete(): This method is used to find a single like document that matches the given post and like ID, and then delete it from the database.
             */
             post: post, // post: post -> It ensures that the like belongs to the correct post.
-            _id: like,  // _id: like -> It ensures that the like being deleted matches the provided like ID.
+            _id: like, // _id: like -> It ensures that the like being deleted matches the provided like ID.
         });
 
         //update the post collection

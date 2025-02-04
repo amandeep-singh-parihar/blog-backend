@@ -1,6 +1,6 @@
 const Post = require("../models/post.model"); // import the post model
 
-// Business logic - it contain what operation will happen if any one hit the route it is mapped with
+// Business logic - it contain what operation will happen if any one hit the route, it is mapped with
 exports.createPostController = async (req, res) => {
     try {
         const { title, body, likes, comments } = req.body; // retrive the title, body, like, comments from request body
