@@ -12,6 +12,12 @@ exports.likePost = async (req, res) => {
 
         const savedLike = await like.save(); // Saves the like object to the database and stores the result in savedLike
 
+        // Either I choose the basic approach then the upper one like below (which I usually do)
+        // const reponse = await like.createdAt({
+        //     post,
+        //     user,
+        // });
+
         const updatedPost = await Post.findByIdAndUpdate(
             post, // This is the ID of the post you want to update
             { $push: { likes: savedLike._id } }, // $push is used to add the new like's _id into the likes array of the corresponding post.

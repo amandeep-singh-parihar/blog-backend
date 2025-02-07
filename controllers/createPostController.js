@@ -9,7 +9,7 @@ exports.createPostController = async (req, res) => {
         res.status(200).json({
             success: true,
             data: response, // sending the data
-            message: "entry create successfully",
+            message: "entry created successfully",
         });
     } catch (error) {
         console.error(error);

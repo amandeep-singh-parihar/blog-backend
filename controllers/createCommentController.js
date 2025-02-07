@@ -24,6 +24,13 @@ exports.createCommentController = async (req, res) => {
         // The comment.save() method in Mongoose is used to save a new document (in this case, a comment) to the MongoDB database
         const savedComment = await comment.save(); // The result (savedComment) contains the data of the newly saved comment, including the automatically generated _id (because the comment is now saved in the MongoDB database)
 
+        // I can also use the basic approach of creating the function like this
+        // const response = await comment.createdAt({
+        //     post,
+        //     user,
+        //     body,
+        // });
+
         // Find the post by ID , add the new comment to its comments array
         const updatedPost = await Post.findByIdAndUpdate(
             // Now that the comment is saved, we want to add it to the post's comments array. The Post.findByIdAndUpdate method does that
